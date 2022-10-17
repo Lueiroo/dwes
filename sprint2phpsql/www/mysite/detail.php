@@ -22,7 +22,7 @@
 			$query_2 = 'SELECT * FROM tComentarios WHERE cancion_id='.$cancion_id;
 			$result_2 = mysqli_query($db, $query_2) or die('Query error2');
 			while ($row = mysqli_fetch_array($result_2)) {
-				echo '<li>'.$row['comentario'].'</li>';
+				echo '<li>'.$row['comentario'].'</li><p>'.$row['fecha'].'</p>';
 			}
 			mysqli_close($db);
 			echo '</ul>';
