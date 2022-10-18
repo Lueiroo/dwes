@@ -7,7 +7,7 @@ def respuesta():
         print ("")
         r = input("¿Cúal es tu respuesta?")
         re = r.upper()
-    return r
+    return re
 
 
 #MAIN
