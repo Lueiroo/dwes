@@ -3,7 +3,6 @@
 		<?php
 			$db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
 		?>
-		<h1>Conexión establecida</h1>
 		<?php
 			if (!isset($_GET['cancion_id'])) {
 				die('No se ha especificado una canción');
@@ -22,7 +21,7 @@
 			$query_2 = 'SELECT * FROM tComentarios WHERE cancion_id='.$cancion_id;
 			$result_2 = mysqli_query($db, $query_2) or die('Query error2');
 			while ($row = mysqli_fetch_array($result_2)) {
-				echo '<li>'.$row['comentario'].'</li><p>'.$row['fecha'].'</p>';
+				echo '<li>'.$row['comentario'].'</li><p>'.$row['usuario_id'].' , '.$row['fecha'].'</p>';
 			}
 			mysqli_close($db);
 			echo '</ul>';
