@@ -3,7 +3,6 @@
 		<?php
 			$db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
 		?>
-		<h1>Conexión establecida</h1>
 		<?php
 			$query =  "SELECT * FROM tCanciones";
 			$result = mysqli_query($db, $query) or die('Query error');
@@ -28,5 +27,8 @@
 			echo"</table>";
 			mysqli_close($db);
 			?>
+
+		<br><br><a href="/logout.php">Si por lo que sea quieres cerrar sesión clícale aquí</a>
+
 	</body>
 </html>
