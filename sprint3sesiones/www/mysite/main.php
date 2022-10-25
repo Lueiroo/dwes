@@ -1,5 +1,33 @@
-//prueba por favor que funcione
 <html>
+	<head>
+		<style>
+			table{
+			    border-collapse: collapse;
+			}
+
+			td, th{
+			    border: 1px solid black;
+			    color: white;
+			    background-color: sienna;
+			}
+
+			td:hover{
+			    color: red;
+			    background-color: burlywood;
+			}
+
+			img{
+			    width: 250px;
+			    height: 250px;
+			    transition: 2s linear;
+			}
+
+			img:hover{
+			    height: 500px;
+			}
+
+    		</style>
+	</head>
 	<body>
 		<?php
 			$db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
