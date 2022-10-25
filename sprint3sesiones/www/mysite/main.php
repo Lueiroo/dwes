@@ -19,11 +19,12 @@
 			img{
 			    width: 250px;
 			    height: 250px;
-			    transition: 2s linear;
+			    transition: 1s linear;
 			}
 
 			img:hover{
-			    height: 500px;
+			    width: 1000px;
+			    height:50px;
 			}
 
     		</style>
