@@ -21,7 +21,10 @@
 			$query_2 = 'SELECT * FROM tComentarios WHERE cancion_id='.$cancion_id;
 			$result_2 = mysqli_query($db, $query_2) or die('Query error2');
 			while ($row = mysqli_fetch_array($result_2)) {
-				echo '<li>'.$row['comentario'].'</li><p>'.$row['usuario_id'].' , '.$row['fecha'].'</p>';
+				$query_3 = 'SELECT nombre FROM tUsuarios WHERE id='.$row['usuario_id'];
+				$result_3 = mysqli_query($db, $query_3) or die ('Query error 3');
+				$auxiliar = mysqli_fetch_array($result_3);
+				echo '<li>'.$row['comentario'].'</li><p>'.$auxiliar['nombre'].' , '.$row['fecha'].'</p>';
 			}
 			mysqli_close($db);
 			echo '</ul>';
