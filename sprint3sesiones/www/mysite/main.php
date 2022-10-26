@@ -59,6 +59,6 @@
 			?>
 
 		<br><br><a href="/logout.php">Si por lo que sea quieres cerrar sesión clícale aquí</a>
-
+		<br><a href="/contrasena.html">Cambiar contraseña</a>
 	</body>
 </html>
