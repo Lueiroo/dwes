@@ -17,6 +17,8 @@ def devolver_canciones(request):
 		diccionario['id'] = i.id
 		diccionario['titulo'] = i.nombre
 		diccionario['fecha'] = i.fecha_publicacion
+		diccionario['url'] = i.url_imagen
+		diccionario['autores'] = i.autoria
 		respuesta_final.append(diccionario)
 	return JsonResponse(respuesta_final, safe=False)
 
@@ -33,6 +35,8 @@ def devolver_cancion_por_id(request, id_solicitado):
 		'id': cancion.id,
 		'titulo': cancion.nombre,
 		'fecha': cancion.fecha_publicacion,
+		'url': cancion.url_imagen,
+		'autores': cancion.autoria,
 		'comentarios': lista_comentarios
 	}
 	return JsonResponse(resultado, json_dumps_params={'ensure_ascii': False})
