@@ -31,7 +31,7 @@
 	</head>
 	<body>
 		<?php
-			$db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
+			$db = mysqli_connect('172.16.0.1', 'root', '1234', 'mysitedb') or die('Fail');
 		?>
 		<?php
 			$query =  "SELECT * FROM tCanciones";
